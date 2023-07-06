@@ -1,3 +1,5 @@
+//const router = express.Router();
+
 exports.getUsers = (req, res) => {
     // Logique pour récupérer les utilisateurs depuis le modèle
     const users = [
@@ -8,3 +10,18 @@ exports.getUsers = (req, res) => {
     // Renvoyer les utilisateurs au format JSON
     res.json(users);
   };
+
+//   router.get('/posts', feedController.getPosts);
+
+//   router.post(
+//     '/post',
+//     [
+//       body('title')
+//         .trim()
+//         .isLength({ min: 5 }),
+//       body('content')
+//         .trim()
+//         .isLength({ min: 5 })
+//     ],
+//     feedController.createPost
+//   );
