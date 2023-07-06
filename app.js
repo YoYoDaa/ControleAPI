@@ -4,13 +4,19 @@ const http = require('http');
 // Importation d'express depuis Node.js
 const express = require('express');
 
+//recupération du JSON
+const apiController = require('./src/controllers/apiController');
+
 // Création de l'application Express
 const app = express();
 
 // Route de base
-app.get('/', (req, res) => {
-  res.send('Hello ESGI world !');
-});
+// app.get('/', (req, res) => {
+//   res.send('Hello ESGI world !');
+// });
+
+
+app.get('/users', apiController.getUsers);
 
 // Test démarage serveur
 
