@@ -15,6 +15,13 @@ const app = express();
 //   res.send('Hello ESGI world !');
 // });
 
+//ajout du contrôl d'erreur
+app.use((err, req, res, next) => {
+    // Logique de gestion des erreurs
+    console.error(err);
+    res.status(500).send('Erreur serveur');
+    next();
+});
 
 app.get('/users', apiController.getUsers);
 
